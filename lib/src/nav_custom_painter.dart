@@ -2,7 +2,7 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 
-const s = 0.18;
+const s = 0.19;
 
 class NavCustomPainter extends CustomPainter {
   late double loc;
@@ -22,7 +22,7 @@ class NavCustomPainter extends CustomPainter {
     final l = startingLoc + (span - s) / 2;
     loc = textDirection == TextDirection.rtl ?  l : l;
     bottom = hasLabel
-        ? (Platform.isAndroid ? 0.55 : 0.53)
+        ? (Platform.isAndroid ? 0.55 : 0.55)
         : (Platform.isAndroid ? 0.6 : 0.5);
   }
 
