@@ -43,15 +43,15 @@ class NavBarItemWidget extends StatelessWidget {
     }
     return Column(
       children: [
-        Expanded(flex: 2, child: _buildIcon()),
+        Expanded(flex: 3, child: _buildIcon()),
         Expanded(
-          flex: 1,
+          flex: 3,
           child: Container(
             alignment: Alignment.center,
             child: Text(label ?? '', style: labelStyle),
           ),
         ),
-        SizedBox(height: Platform.isIOS ? 20.0 : 10.0),
+        SizedBox(height: Platform.isIOS ? 15.0 : 10.0),
       ],
     );
   }

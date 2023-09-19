@@ -137,7 +137,7 @@ class CurvedNavigationBarState extends State<CurvedNavigationBar>
         children: <Widget>[
           // Selected button
           Positioned(
-            bottom: widget.height - 105.0,
+            bottom: widget.height - 125.0,
             left: Directionality.of(context) == TextDirection.rtl
                 ? null
                 : _pos * size.width,
@@ -147,7 +147,10 @@ class CurvedNavigationBarState extends State<CurvedNavigationBar>
             width: size.width / _length,
             child: Center(
               child: Transform.translate(
-                offset: Offset(0, (_buttonHide - 1) * 80),
+                offset: Offset(0,
+                    (_buttonHide - 1) * 90
+                  //-88
+                ),
                 child: Material(
                   color: widget.buttonBackgroundColor ?? widget.color,
                   type: MaterialType.circle,
@@ -166,13 +169,16 @@ class CurvedNavigationBarState extends State<CurvedNavigationBar>
             bottom: 0,
             child: CustomPaint(
               painter: NavCustomPainter(
-                startingLoc: _pos,
+                startingLoc:
+                _pos
+               //0.3
+                ,
                 itemsLength: _length,
                 color: widget.color,
                 textDirection: Directionality.of(context),
                 hasLabel: widget.hasLabel,
               ),
-              child: Container(height: widget.height),
+              child: Container(height: widget.height + 10),
             ),
           ),
           // Unselected buttons
